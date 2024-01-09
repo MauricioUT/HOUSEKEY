@@ -33,8 +33,7 @@ export class MyPropertiesComponent implements OnInit {
   public remove(property:Property) {
     const index: number = this.dataSource.data.indexOf(property);    
     if (index !== -1) {
-      const message = this.appService.getTranslateValue('MESSAGE.SURE_DELETE') ?? '';
-      let dialogRef = this.appService.openConfirmDialog('', message); 
+      let dialogRef = this.appService.openConfirmDialog('', 'Esta seguro de eliminar?'); 
 			dialogRef.afterClosed().subscribe(dialogResult => {
 				if(dialogResult){ 
           this.dataSource.data.splice(index,1);

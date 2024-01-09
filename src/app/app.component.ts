@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Settings, AppSettings } from './app.settings';
 import { Router, NavigationEnd } from '@angular/router'; 
-import { TranslateService } from '@ngx-translate/core';
+
 import { DomHandlerService } from './dom-handler.service';
 
 @Component({
@@ -14,12 +14,8 @@ export class AppComponent {
   public settings: Settings;
   constructor(public appSettings:AppSettings, 
               public router:Router,  
-              public translate: TranslateService,
               private domHandlerService: DomHandlerService){
     this.settings = this.appSettings.settings;
-    translate.addLangs(['en','de','fr','ru','tr']);
-    translate.setDefaultLang('en'); 
-    translate.use('en');
   }
 
   ngAfterViewInit(){ 

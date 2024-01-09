@@ -12,14 +12,6 @@ import { InputFileConfig, InputFileModule } from './theme/components/input-file/
 const config: InputFileConfig = {
   fileAccept: '*'
 };
-
-import { environment } from 'src/environments/environment';
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader'; 
-export function HttpLoaderFactory(httpClient: HttpClient) { 
-  return new TranslateHttpLoader(httpClient, environment.url +'/assets/i18n/', '.json');
-}
-
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { CustomOverlayContainer } from './theme/utils/custom-overlay-container';
 
@@ -36,7 +28,6 @@ import { Toolbar1Component } from './theme/components/toolbar1/toolbar1.componen
 import { Toolbar2Component } from './theme/components/toolbar2/toolbar2.component';
 import { UserMenuComponent } from './theme/components/user-menu/user-menu.component';
 import { CurrencyComponent } from './theme/components/currency/currency.component';
-import { LangComponent } from './theme/components/lang/lang.component';
 import { SocialIconsComponent } from './theme/components/social-icons/social-icons.component';
 import { ContactsComponent } from './theme/components/contacts/contacts.component'; 
 import { HorizontalMenuComponent } from './theme/components/menu/horizontal-menu/horizontal-menu.component';
@@ -51,7 +42,6 @@ import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
     NotFoundComponent,
     UserMenuComponent,
     CurrencyComponent,
-    LangComponent,
     SocialIconsComponent,
     ContactsComponent, 
     Toolbar1Component,
@@ -68,13 +58,6 @@ import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
     FormsModule, 
     HttpClientModule,
     GoogleMapsModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
     NgProgressModule,
     NgProgressHttpModule, 
     InputFileModule.forRoot(config), 

@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
 import { MatDialog } from '@angular/material/dialog';
 import { ConfirmDialogComponent, ConfirmDialogModel } from './shared/confirm-dialog/confirm-dialog.component';
 import { AlertDialogComponent } from './shared/alert-dialog/alert-dialog.component';
-import { TranslateService } from '@ngx-translate/core';
 import { DomHandlerService } from './dom-handler.service';
 
 export class Data {
@@ -38,7 +37,6 @@ export class AppService {
               private snackBar: MatSnackBar,
               public appSettings:AppSettings,
               public dialog: MatDialog,
-              public translateService: TranslateService,
               private domHandlerService: DomHandlerService) { }
     
   public getProperties(): Observable<Property[]>{
@@ -120,13 +118,6 @@ export class AppService {
     return dialogRef; 
   }
 
-  public getTranslateValue(key: string, param: string | null = null){  
-    let value: string | null = null;
-    this.translateService.get(key, { param: param }).subscribe((res: string) => {
-      value = res;
-    }) 
-    return value; 
-  }
 
   public getPropertyTypes(){
     return [ 

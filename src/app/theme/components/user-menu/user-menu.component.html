@@ -1,6 +1,6 @@
 <a mat-button [matMenuTriggerFor]="userMenu" #userMenuTrigger="matMenuTrigger">
     <mat-icon class="mat-icon-sm m-0">person</mat-icon>
-    <span fxShow="false" fxShow.gt-sm class="mx-1 uppercase">{{ 'ACCOUNT' | translate }}</span> 
+    <span fxShow="false" fxShow.gt-sm class="mx-1 uppercase">Cuenta</span> 
     <mat-icon class="mat-icon-sm caret" iconPositionEnd>arrow_drop_down</mat-icon>
 </a>
 <mat-menu #userMenu="matMenu" [overlapTrigger]="false" xPosition="before" class="app-menu-panel user-menu">
@@ -12,11 +12,11 @@
         <div class="divider"></div>
         <a mat-menu-item routerLink="/submit-property"> 
             <mat-icon class="mat-icon-sm">add_circle</mat-icon>
-            <span>{{ 'SUBMIT_PROPERTY' | translate }}</span> 
+            <span>Agregar propiedad</span> 
         </a>
         <a mat-menu-item routerLink="/account/my-properties"> 
             <mat-icon class="mat-icon-sm">home</mat-icon>
-            <span>{{ 'MY_PROPERTIES' | translate }}</span> 
+            <span>Mis propiedades</span> 
         </a>
         <a mat-menu-item routerLink="/account/favorites"> 
             <mat-icon class="mat-icon-sm">favorite_border</mat-icon>
@@ -25,7 +25,7 @@
                   matBadgeSize="small" 
                   matBadgeColor="warn" 
                   matBadgeOverlap="false"
-                  aria-hidden="false"> {{ 'FAVORITES' | translate }}</span> 
+                  aria-hidden="false"> Favoritos</span> 
         </a>
         <a mat-menu-item routerLink="/compare"> 
             <mat-icon class="mat-icon-sm">compare_arrows</mat-icon> 
@@ -34,7 +34,7 @@
                   matBadgeSize="small" 
                   matBadgeColor="warn" 
                   matBadgeOverlap="false"
-                  aria-hidden="false">{{ 'COMPARE' | translate }}</span> 
+                  aria-hidden="false">Comparar</span> 
         </a>
         <!-- <a mat-menu-item routerLink="/"> 
             <mat-icon class="mat-icon-sm">search</mat-icon>
@@ -42,20 +42,20 @@
         </a> -->
         <a mat-menu-item routerLink="/account/profile"> 
             <mat-icon class="mat-icon-sm">edit</mat-icon>
-            <span>{{ 'EDIT_PROFILE' | translate }}</span> 
+            <span>Editar perfil</span> 
         </a>
         <a mat-menu-item routerLink="/lock-screen"> 
             <mat-icon class="mat-icon-sm">lock</mat-icon>
-            <span>{{ 'LOCK_SCREEN' | translate }}</span> 
+            <span>bloquear pantalla</span> 
         </a>
         <a mat-menu-item routerLink="/faq"> 
             <mat-icon class="mat-icon-sm">help</mat-icon>
-            <span>{{ 'HELP' | translate }}</span> 
+            <span>Ayuda</span> 
         </a>
         <div class="divider"></div>
         <a mat-menu-item routerLink="/login"> 
             <mat-icon class="mat-icon-sm">power_settings_new</mat-icon>
-            <span>{{ 'LOGOUT' | translate }}</span> 
+            <span>Salir</span> 
         </a>
     </span>
 </mat-menu>  

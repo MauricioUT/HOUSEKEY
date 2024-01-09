@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SwiperModule } from 'src/app/theme/components/swiper/swiper.module';
-import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -74,7 +73,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     RouterModule,
     ReactiveFormsModule,
     SwiperModule,
-    TranslateModule,
     FlexLayoutModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -118,7 +116,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     RouterModule,
     ReactiveFormsModule,
     SwiperModule,
-    TranslateModule,
     FlexLayoutModule,
     MatAutocompleteModule,
     MatBadgeModule,

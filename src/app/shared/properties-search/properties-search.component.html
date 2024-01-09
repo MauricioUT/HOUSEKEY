@@ -239,9 +239,9 @@
   
 
     <div fxLayout="row" fxLayoutAlign="center center" class="p-2">       
-        <button mat-raised-button color="warn" class="uppercase mx-1" (click)="reset()">{{ 'BTN.CLEAR' | translate }}</button>
+        <button mat-raised-button color="warn" class="uppercase mx-1" (click)="reset()">Limpiar</button>
         <button *ngIf="!vertical" mat-raised-button color="primary" class="uppercase mx-1" (click)="showMore = !showMore">
-            {{( showMore ? 'BTN.HIDE' : 'BTN.ADVANCED' )| translate}}
+            {{( showMore ? 'Ocultar' : 'Busqueda avanzada' )}}
             </button>      
         <button *ngIf="searchOnBtnClick" mat-raised-button color="primary" class="search-btn uppercase mx-1" (click)="search()">
             <mat-icon class="mat-icon-md">search</mat-icon> Search
