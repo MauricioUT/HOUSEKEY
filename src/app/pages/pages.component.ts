@@ -58,7 +58,7 @@ export class PagesComponent implements OnInit {
     (scrollTop > 300) ? this.showBackToTop = true : this.showBackToTop = false; 
 
     if(this.settings.stickyMenuToolbar){      
-      let top_toolbar = this.domHandlerService.winDocument.getElementById('top-toolbar');
+      let top_toolbar = this.domHandlerService.winDocument.getElementById('main-toolbar');
       if(top_toolbar){ 
         if(scrollTop >= top_toolbar.clientHeight) {
           this.settings.mainToolbarFixed = true;
