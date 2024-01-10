@@ -277,7 +277,7 @@ export class FooterComponent implements OnInit {
         styles: this.mapStyles
     }
     feedbackForm: UntypedFormGroup;
-    subscribeForm: UntypedFormGroup;
+  
 
     constructor(public formBuilder: UntypedFormBuilder) { }
 
@@ -285,10 +285,7 @@ export class FooterComponent implements OnInit {
         this.feedbackForm = this.formBuilder.group({ 
             email: ['', Validators.compose([Validators.required, emailValidator])], 
             message: ['', Validators.required]
-        });
-        this.subscribeForm = this.formBuilder.group({
-            email: ['', Validators.compose([Validators.required, emailValidator])]
-        })      
+        });    
     }
 
     ngAfterViewInit() {
@@ -297,12 +294,6 @@ export class FooterComponent implements OnInit {
 
     public onFeedbackFormSubmit(values:Object):void {
         if (this.feedbackForm.valid) {
-            console.log(values);
-        }
-    }
-
-    public onSubscribeFormSubmit(values:Object):void {
-        if (this.subscribeForm.valid) {
             console.log(values);
         }
     }
