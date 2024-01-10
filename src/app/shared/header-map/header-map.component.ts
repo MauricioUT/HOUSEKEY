@@ -279,7 +279,7 @@ export class HeaderMapComponent implements OnInit {
         }
     ]; 
     mapOptions: google.maps.MapOptions = {
-        styles: this.appSettings.settings.theme == 'orange-dark' ? this.mapStyles : null,
+        styles: this.appSettings.settings.theme == 'luxore-dark' ? this.mapStyles : null,
         mapTypeControl: false,
         fullscreenControl: true,
         streetViewControl: true

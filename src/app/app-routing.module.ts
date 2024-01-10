@@ -24,7 +24,6 @@ export const routes: Routes = [
           { path: 'submit-property', loadChildren: () => import('./pages/submit-property/submit-property.module').then(m => m.SubmitPropertyModule) }   
       ]
   },
-  { path: 'landing', loadChildren: () => import('./pages/landing/landing.module').then(m => m.LandingModule) },
   { path: 'lock-screen', component: LockScreenComponent },
   { path: '**', component: NotFoundComponent }
 ];
