@@ -1,11 +1,10 @@
 <footer>       
-
     <div class="px-3">
         <div class="theme-container">
             <div class="py-5 content border-lighter">
 
                 <div fxLayout="row wrap" fxLayoutAlign="space-between"> 
-                    <div fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="45"> 
+                    <div fxFlex="100" fxFlex.gt-sm="30" fxFlex.sm="45"> 
                         <h2 class="uppercase mb-3">UBICACIÓN</h2>
                         <p fxLayout="row" fxLayoutAlign="start center" class="mt-2">
                             <mat-icon color="primary">location_on</mat-icon>
@@ -18,24 +17,21 @@
 
                                   
                     </div>
-                </div> 
-
-                <div class="mr-2" fxFlex="100" fxFlex.gt-sm="100" fxFlex.sm="45" ngClass.xs="pt-5"> 
-                    <h2 class="uppercase">Contactanos</h2>
-                    <p fxLayout="row" fxLayoutAlign="start center" class="mt-1">
-                        <mat-icon color="primary">call</mat-icon>
-                        <span class="mx-2">55 8988 3659</span>
-                    </p>
-                    <p fxLayout="row" fxLayoutAlign="start center" class="mt-1">
-                        <mat-icon color="primary">mail_outline</mat-icon>
-                        <span class="mx-2">contacto&#64;luxore.mx</span>
-                    </p>
-
-                    <app-social-icons [iconSize]="'lg'" fxLayout="row" fxLayoutAlign="start center" class="desc"></app-social-icons>         
-                </div>
-              
+                    <div fxFlex="100" fxFlex.gt-sm="60" ngClass.lt-md="pt-5"> 
+                        <h2 class="uppercase mb-3">Contactanos</h2>
+                        <p fxLayout="row" fxLayoutAlign="start center" class="mt-1">
+                            <mat-icon color="primary">call</mat-icon>
+                            <span class="mx-2">55 8988 3659</span>
+                        </p>
+                        <p fxLayout="row" fxLayoutAlign="start center" class="mt-1">
+                            <mat-icon color="primary">mail_outline</mat-icon>
+                            <span class="mx-2">contacto&#64;luxore.mx</span>
+                        </p>
+    
+                        <app-social-icons [iconSize]="'lg'" fxLayout="row" fxLayoutAlign="start center" class="desc"></app-social-icons>    
+                    </div>
+                </div>               
             </div>
         </div>
-    </div>                  
-                
+    </div>                             
 </footer>
