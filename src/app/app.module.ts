@@ -25,7 +25,6 @@ import { AppInterceptor } from './theme/utils/app-interceptor';
 import { PagesComponent } from './pages/pages.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { Toolbar1Component } from './theme/components/toolbar1/toolbar1.component';
-import { Toolbar2Component } from './theme/components/toolbar2/toolbar2.component';
 import { UserMenuComponent } from './theme/components/user-menu/user-menu.component';
 import { CurrencyComponent } from './theme/components/currency/currency.component';
 import { SocialIconsComponent } from './theme/components/social-icons/social-icons.component';
@@ -45,7 +44,6 @@ import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
     SocialIconsComponent,
     ContactsComponent, 
     Toolbar1Component,
-    Toolbar2Component,
     HorizontalMenuComponent,
     VerticalMenuComponent,
     FooterComponent,

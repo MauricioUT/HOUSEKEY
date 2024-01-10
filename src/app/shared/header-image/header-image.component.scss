@@ -85,12 +85,6 @@
         .header-image-content{
             height: calc(100vh - #{$main-toolbar-height}) !important;
         }
-        &.toolbar-2{
-            height: calc(100vh - 166px) !important;
-            .header-image-content{
-                height: calc(100vh - 166px) !important;
-            } 
-        }
     }
 }
 
