@@ -284,30 +284,6 @@ a{
 
 
 header{
-    &.toolbar-2{
-        .top-toolbar.mat-toolbar{
-            height: auto;
-            .mat-toolbar-row:first-child{
-                height: $top-toolbar-height;
-                .right-section{
-                    height: $top-toolbar-height;
-                }
-            }
-            .mat-toolbar-row:nth-child(2){
-                height: auto; 
-                font-size: 14px;
-                font-style: italic; 
-                padding-top: 8px;
-                padding-bottom: $top-toolbar-height + 8px; 
-                .item{
-                    width: 100%;
-                    white-space: normal;
-                    line-height: 1.5;
-                    padding: 0 8px;
-                }
-            }
-        }
-    }
     &.has-bg-image, &.has-bg-video{
         #main-toolbar{
             box-shadow: none;

@@ -23,7 +23,6 @@
         <header [ngClass]="'toolbar-'+settings.toolbar" [class.has-bg-image]="settings.headerBgImage" [class.has-bg-video]="settings.headerBgVideo" [class.main-toolbar-fixed]="settings.mainToolbarFixed">
 
             <app-toolbar1 *ngIf="settings.toolbar == 1" (onMenuIconClick)="sidenav.toggle()"></app-toolbar1>
-            <app-toolbar2 *ngIf="settings.toolbar == 2" (onMenuIconClick)="sidenav.toggle()"></app-toolbar2>
         
         </header>
           

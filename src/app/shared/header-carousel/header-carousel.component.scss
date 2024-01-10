@@ -50,9 +50,6 @@
     }
     &.fullscreen{
         height: calc(100vh - (#{$top-toolbar-height} + #{$main-toolbar-height})) !important;
-        &.toolbar-2{
-            height: calc(100vh - 202px) !important; 
-        }
     }
 }
 

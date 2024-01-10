@@ -10,7 +10,7 @@ import { DomHandlerService } from '../dom-handler.service';
 })
 export class PagesComponent implements OnInit {
   @ViewChild('sidenav') sidenav:any;  
-  public toolbarTypes = [1, 2];
+  public toolbarTypes = [1];
   public toolbarTypeOption:number;
   public headerTypes = ['default', 'image', 'carousel', 'map', 'video'];
   public headerTypeOption:string;
