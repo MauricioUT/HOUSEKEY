@@ -40,10 +40,6 @@
     .divider{
         border-top: 1px solid mat.get-color-from-palette($foreground, divider);
     }
-
-    .top-toolbar.mat-toolbar .v-divider{
-        background-color: mat.get-color-from-palette($primary, lighter, 0.2);
-    }
     .border-bottom-lighter{
         border-bottom: 1px solid mat.get-color-from-palette($primary, lighter, 0.2);
     }
@@ -52,11 +48,6 @@
     }
     .border-accent{
         border-color: mat.get-color-from-palette($accent);        
-    }
-
-    #top-toolbar{
-        background: mat.get-color-from-palette($primary);
-        color: mat.get-color-from-palette($primary, default-contrast);
     }
     #main-toolbar{
         background: mat.get-color-from-palette($primary, darker-contrast);
