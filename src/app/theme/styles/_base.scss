@@ -509,38 +509,6 @@ main.content-offset-to-top{
     margin: -16px;
     padding: 8px;
 }
-
-
- 
-/******* Pricing *******/
-.pricing-tabs.mat-mdc-tab-group{   
-    margin: 0 -8px;
-}
-.pricing-tabs.mat-mdc-tab-group .mat-mdc-tab-header{ 
-    border-bottom: none !important;
-    margin-bottom: 16px;
-}
-.pricing-card.mat-mdc-card{
-    padding: 0;
-    overflow: hidden;
-    border-width: 4px 0 0 0;
-    border-style: solid;
-    .pricing-title{
-        text-transform: uppercase;
-        font-weight: 500;
-    }
-    .pricing-header{
-        min-height: 126px;
-        small{
-            font-weight: normal;
-        }
-    }
-    .del{
-        text-decoration:line-through;
-    }    
-}
-
-
  
 /******* Account *******/
 .account{
