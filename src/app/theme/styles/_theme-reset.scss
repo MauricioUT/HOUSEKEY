@@ -60,6 +60,7 @@
     }
     #main-toolbar{
         background: mat.get-color-from-palette($primary, darker-contrast);
+        color: #fff;
     }
     header{
         .logo svg{
@@ -128,7 +129,7 @@
     }
     .horizontal-sub-menu{ 
         .mat-mdc-button, .mat-mdc-menu-item{
-            color: mat.get-color-from-palette($foreground, text);
+            color: black;
             &.horizontal-active-link { 
                 color: mat.get-color-from-palette($primary); 
             }
