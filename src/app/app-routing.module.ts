@@ -13,7 +13,6 @@ export const routes: Routes = [
           { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
           { path: 'contact', loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule) },
           { path: 'properties', loadChildren: () => import('./pages/properties/properties.module').then(m => m.PropertiesModule) },
-          { path: 'agents', loadChildren: () => import('./pages/agents/agents.module').then(m => m.AgentsModule) },
           { path: 'compare', loadChildren: () => import('./pages/compare/compare.module').then(m => m.CompareModule) },
           { path: 'pricing', loadChildren: () => import('./pages/pricing/pricing.module').then(m => m.PricingModule) },
           { path: 'faq', loadChildren: () => import('./pages/faq/faq.module').then(m => m.FaqModule) },

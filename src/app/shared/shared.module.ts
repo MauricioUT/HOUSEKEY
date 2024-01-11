@@ -57,7 +57,6 @@ import { ClientsComponent } from './clients/clients.component';
 import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 import { CommentsComponent } from './comments/comments.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component'; 
-import { OurAgentsComponent } from './our-agents/our-agents.component';
 import { MissionComponent } from './mission/mission.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { LogoComponent } from './logo/logo.component';
@@ -169,7 +168,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     GetInTouchComponent,
     CommentsComponent,
     TestimonialsComponent,   
-    OurAgentsComponent, 
     MissionComponent, 
     OurServicesComponent,
     HeaderMapComponent,
@@ -194,7 +192,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     GetInTouchComponent,
     CommentsComponent,
     TestimonialsComponent,   
-    OurAgentsComponent, 
     MissionComponent, 
     OurServicesComponent, 
     HeaderMapComponent, 

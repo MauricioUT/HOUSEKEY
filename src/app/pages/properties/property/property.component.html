@@ -10,6 +10,7 @@
                 <mat-card class="p-3"> 
 
                     <div class="widget"> 
+                        
                         <mat-card *ngIf="agent">
                             <img mat-card-image [src]="agent.image" [alt]="agent.fullName"> 
                             <mat-card-content class="p-3">
@@ -49,9 +50,6 @@
                                         </svg>
                                     </a>  
                                 </div>
-                                <div>
-                                    <a [routerLink]="['/agents', agent.id]" mat-button color="primary" class="uppercase">View Profile</a>
-                                </div> 
                             </mat-card-actions>                              
                         </mat-card>
                     </div> 

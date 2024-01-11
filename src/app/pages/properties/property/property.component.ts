@@ -46,6 +46,25 @@ export class PropertyComponent implements OnInit {
               public fb: UntypedFormBuilder,
               private domHandlerService: DomHandlerService) {
     this.settings = this.appSettings.settings; 
+
+          this.agent  = { 
+            id: 1,
+            fullName: 'Luxore',
+            desc: 'agregar descripción',            
+            organization: 'Luxore',
+            email: 'ajustar correo',
+            phone: 'ajustar número',
+            social: {
+              facebook: 'lusia',
+              twitter: 'lusia',
+              linkedin: 'lusia',
+              instagram: 'lusia',
+              website: 'https://lusia.manuel.com'
+            },
+            ratingsCount: 6,
+            ratingsValue: 480,
+            image: 'assets/images/agents/a-1.jpg' 
+        }
   }
 
   ngOnInit() {
@@ -54,7 +73,6 @@ export class PropertyComponent implements OnInit {
     });
     this.getRelatedProperties();
     this.getFeaturedProperties();
-    this.getAgent(1);
     if(this.domHandlerService.window?.innerWidth < 960){
       this.sidenavOpen = false;
       if(this.sidenav){
@@ -209,11 +227,6 @@ export class PropertyComponent implements OnInit {
     })
   } 
 
-  public getAgent(agentId:number = 1){
-    var ids = [1,2,3,4,5]; //agent ids 
-    agentId = ids[Math.floor(Math.random()*ids.length)]; //random agent id
-    this.agent = this.appService.getAgents().filter(agent=> agent.id == agentId)[0]; 
-  }
 
   public onContactFormSubmit(values:Object){
     if (this.contactForm.valid) { 
