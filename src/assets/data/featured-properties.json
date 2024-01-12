@@ -71,7 +71,7 @@
         "gallery": [
             {
                 "small": "assets/images/props/office/1-small.jpg",
-                "medium": "assets/images/props/office/1-medium.jpg",
+                "medium": "assets/images/props/office/1-medium.webp",
                 "big": "assets/images/props/office/1-big.jpg"
             },
             {
@@ -210,7 +210,7 @@
         "gallery": [
             {
                 "small": "assets/images/props/flat-2/1-small.jpg",
-                "medium": "assets/images/props/flat-2/1-medium.jpg",
+                "medium": "assets/images/props/flat-2/1-medium.webp",
                 "big": "assets/images/props/flat-2/1-big.jpg"
             },
             {

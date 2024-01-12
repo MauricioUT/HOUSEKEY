@@ -21,11 +21,11 @@ export class HomeComponent implements OnInit {
   public properties: Property[];
   public viewType: string = 'grid';
   public viewCol: number = 25;
-  public count: number = 8;
+  public count: number = 4;
   public sort: string;
   public searchFields: any;
   public removedSearchField: string | null;
-  public pagination:Pagination = new Pagination(1, 8, null, 2, 0, 0); 
+  public pagination:Pagination = new Pagination(1, 4, null, 2, 0, 0); 
   public message: string | null;
   public featuredProperties: Property[];
   public locations: Location[]; 
