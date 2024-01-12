@@ -2,13 +2,9 @@ import { Menu } from './menu.model';
 
 export const horizontalMenuItems = [ 
     new Menu (1, 'Inicio', '/', null, null, false, 0),
-    new Menu (2, 'Propiedades', '/properties', null, null, false, 0), 
     new Menu (40, 'Páginas', null, null, null, true, 0),
-    new Menu (43, 'LOGIN', '/login', null, null, false, 40), 
-    new Menu (44, 'Registrarse', '/register', null, null, false, 40), 
     new Menu (45, 'Preguntas frecuentes', '/faq', null, null, false, 40),
     new Menu (47, 'Teminos y condiciones', '/terms-conditions', null, null, false, 40), 
-    new Menu (48, 'Landing', '/landing', null, null, false, 40),  
     new Menu (50, '404 Page', '/404', null, null, false, 40),  
     new Menu (60, 'Contacto', '/contact', null, null, false, 0),  
     new Menu (70, 'Acerca de nosotros', '/about', null, null, false, 0),   
@@ -21,13 +17,9 @@ export const horizontalMenuItems = [
 
 export const verticalMenuItems = [ 
     new Menu (1, 'Inicio', '/', null, null, false, 0), 
-    new Menu (2, 'Propiedades', '/properties', null, null, false, 0), 
     new Menu (40, 'Páginas', null, null, null, true, 0),
-    new Menu (43, 'LOGIN', '/login', null, null, false, 40), 
-    new Menu (44, 'Registrarse', '/register', null, null, false, 40),   
     new Menu (45, 'Preguntas frecuentes', '/faq', null, null, false, 40),
     new Menu (47, 'Teminos y condiciones', '/terms-conditions', null, null, false, 40),  
-    new Menu (48, 'Landing', '/landing', null, null, false, 40), 
     new Menu (50, '404 Page', '/404', null, null, false, 40),
     new Menu (60, 'Contacto', '/contact', null, null, false, 0),  
     new Menu (70, 'Acerca de nosotros', '/about', null, null, false, 0),    

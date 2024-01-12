@@ -8,27 +8,6 @@
                 [fullscreen]="false">
 </app-header-image> 
 
-<app-header-carousel *ngIf="settings.header == 'carousel'" 
-                    [slides]="slides" 
-                    [contentOffsetToTop]="true"
-                    [fullscreen]="false">
-</app-header-carousel>
-
-<app-header-map *ngIf="settings.header == 'map'" 
-                [locations]="locations" 
-                [contentOffsetToTop]="true"
-                [fullscreen]="false">
-</app-header-map>
-
-<app-header-video *ngIf="settings.header == 'video'" 
-                [backgroundVideo]="'http://themeseason.com/data/videos/video-1.mp4'" 
-                [contentOffsetToTop]="true"
-                [title]="'Find your house key'"
-                [desc]="'Leading Real Estate Company'"
-                [isHomePage]="true"
-                [fullscreen]="true">
-</app-header-video>
-
 <div class="px-3">
     <div class="theme-container">
                 
@@ -88,6 +67,3 @@
         
     </div>
 </div>
-
-
-<app-get-in-touch></app-get-in-touch>

@@ -7,7 +7,6 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS, provideHttpClient, wit
 
 import { NgProgressModule } from 'ngx-progressbar';
 import { NgProgressHttpModule } from 'ngx-progressbar/http';
-import { GoogleMapsModule } from '@angular/google-maps'; 
 import { InputFileConfig, InputFileModule } from './theme/components/input-file/input-file.module';
 const config: InputFileConfig = {
   fileAccept: '*'
@@ -25,21 +24,18 @@ import { AppInterceptor } from './theme/utils/app-interceptor';
 import { PagesComponent } from './pages/pages.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { Toolbar1Component } from './theme/components/toolbar1/toolbar1.component';
-import { UserMenuComponent } from './theme/components/user-menu/user-menu.component';
 import { CurrencyComponent } from './theme/components/currency/currency.component';
 import { SocialIconsComponent } from './theme/components/social-icons/social-icons.component';
 import { ContactsComponent } from './theme/components/contacts/contacts.component'; 
 import { HorizontalMenuComponent } from './theme/components/menu/horizontal-menu/horizontal-menu.component';
 import { VerticalMenuComponent } from './theme/components/menu/vertical-menu/vertical-menu.component';
 import { FooterComponent } from './theme/components/footer/footer.component';
-import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PagesComponent,
     NotFoundComponent,
-    UserMenuComponent,
     CurrencyComponent,
     SocialIconsComponent,
     ContactsComponent, 
@@ -47,7 +43,6 @@ import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
     HorizontalMenuComponent,
     VerticalMenuComponent,
     FooterComponent,
-    LockScreenComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +50,6 @@ import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
     BrowserAnimationsModule,  
     FormsModule, 
     HttpClientModule,
-    GoogleMapsModule,
     NgProgressModule,
     NgProgressHttpModule, 
     InputFileModule.forRoot(config), 

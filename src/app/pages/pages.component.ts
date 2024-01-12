@@ -10,13 +10,6 @@ import { DomHandlerService } from '../dom-handler.service';
 })
 export class PagesComponent implements OnInit {
   @ViewChild('sidenav') sidenav:any;  
-  public toolbarTypes = [1];
-  public toolbarTypeOption:number;
-  public headerTypes = ['default', 'image', 'carousel', 'map', 'video'];
-  public headerTypeOption:string;
-  public searchPanelVariants = [1, 2, 3];
-  public searchPanelVariantOption:number;
-  public headerFixed: boolean = false;
   public showBackToTop: boolean = false;
   public scrolledCount = 0;
 
@@ -28,30 +21,8 @@ export class PagesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.toolbarTypeOption = this.settings.toolbar;    
-    this.headerTypeOption = this.settings.header; 
-    this.searchPanelVariantOption = this.settings.searchPanelVariant;
   }
-  
-  public changeTheme(theme){
-    this.settings.theme = theme;       
-  }
-
-  public chooseToolbarType(){
-    this.settings.toolbar = this.toolbarTypeOption;
-    this.domHandlerService.winScroll(0, 0); 
-  }
-
-  public chooseHeaderType(){
-    this.settings.header = this.headerTypeOption;    
-    this.domHandlerService.winScroll(0, 0); 
-    this.router.navigate(['/']);
-  }
-
-  public chooseSearchPanelVariant(){
-    this.settings.searchPanelVariant = this.searchPanelVariantOption;
-  }
-     
+      
  
   @HostListener('window:scroll') onWindowScroll() {
     const scrollTop = Math.max(this.domHandlerService.window?.pageYOffset, this.domHandlerService.winDocument.documentElement.scrollTop, this.domHandlerService.winDocument.body.scrollTop);

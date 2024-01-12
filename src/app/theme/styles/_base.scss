@@ -561,21 +561,6 @@ main.content-offset-to-top{
     }
 }
  
-
-
-/******* Submit Property *******/
-.submit-property {
-    .step-content{
-        max-width: 760px;
-        margin: 0 auto;
-    }  
-    .step-section{
-        padding: 20px 10px 0;
-        border-radius: 4px;
-        margin: 8px 8px 16px;
-    }  
-}
-
 /******* Compare Property *******/
 .compare-item{
     .mdc-evolution-chip-set .mdc-evolution-chip-set__chips,
@@ -807,9 +792,6 @@ button.swipe-arrow{
             box-shadow: none !important;
         } 
     }       
-    .submit-property .mat-step-label{
-        display: none;
-    }
     .theme-dialog{
         min-width: 95%; 
     }

@@ -33,69 +33,10 @@
         <div class="sticky-footer-helper" fxFlex="grow"></div>
 
         <app-footer></app-footer>
-       
-        <div fxLayout="row" fxLayoutAlign="center center" class="options-icon" (click)="options.toggle()">
-            <mat-icon>settings</mat-icon>
-        </div>
         
         <div *ngIf="showBackToTop" fxLayout="row" fxLayoutAlign="center center" class="back-to-top" (click)="scrollToTop()">
             <mat-icon>arrow_upward</mat-icon>
         </div>
 
     </mat-sidenav-content> 
-    
-    <mat-sidenav #options position="end" class="options" autoFocus="false">
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="op-header mat-elevation-z1">
-            <h2>Settings</h2>
-            <button mat-icon-button (click)="options.toggle()" color="accent">
-                <mat-icon>close</mat-icon>
-            </button>
-        </div> 
-        <ng-scrollbar pointerEventsMethod="scrollbar">
-
-            <div fxLayout="column" class="control">
-                <h4>Layout</h4>
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>Sticky Menu Toolbar</span>
-                    <mat-slide-toggle [checked]="settings.stickyMenuToolbar" (change)="settings.stickyMenuToolbar = !settings.stickyMenuToolbar" labelPosition="before"></mat-slide-toggle>
-                </div>                 
-                <div fxLayout="row" fxLayoutAlign="space-between center">
-                    <span>RTL</span>
-                    <mat-slide-toggle [checked]="settings.rtl" (change)="settings.rtl = !settings.rtl" labelPosition="before"></mat-slide-toggle>
-                </div> 
-            </div>
-
-            <div fxLayout="column" class="control">
-                <h4>Choose toolbar type</h4>
-                <mat-radio-group [(ngModel)]="toolbarTypeOption" (change)="chooseToolbarType()">
-                    <mat-radio-button *ngFor="let toolbarType of toolbarTypes" [value]="toolbarType">toolbar-{{toolbarType}}</mat-radio-button>
-                </mat-radio-group>
-            </div>
-            
-            <div fxLayout="column" class="control">
-                <h4>Choose header type</h4>
-                <mat-radio-group [(ngModel)]="headerTypeOption" (change)="chooseHeaderType()">
-                    <mat-radio-button *ngFor="let headerType of headerTypes" [value]="headerType">{{headerType}}</mat-radio-button>
-                </mat-radio-group>
-            </div>
-
-            <div fxLayout="column" class="control">
-                <h4>Choose theme skin</h4> 
-                <div fxLayout="row" fxLayoutAlign="space-between center"> 
-                    <div class="skin-primary luxore" (click)="changeTheme('luxore')"></div>
-                    <div class="skin-primary luxore-dark" (click)="changeTheme('luxore-dark')"><div class="skin-secondary"></div></div>
-                </div>
-            </div>
-
-            <div fxLayout="column" class="control">
-                <h4>Choose search panel variant</h4>
-                <mat-radio-group [(ngModel)]="searchPanelVariantOption" (change)="chooseSearchPanelVariant()">
-                    <mat-radio-button *ngFor="let searchPanelVariant of searchPanelVariants" [value]="searchPanelVariant">variant-{{searchPanelVariant}}</mat-radio-button>
-                </mat-radio-group>
-                <mat-slide-toggle [checked]="settings.searchOnBtnClick" (change)="settings.searchOnBtnClick = !settings.searchOnBtnClick" labelPosition="after">Search On Button Click</mat-slide-toggle>
-            </div> 
-
-        </ng-scrollbar>
-    </mat-sidenav>
-    
 </mat-sidenav-container> 
