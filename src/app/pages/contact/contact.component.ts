@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { ScriptHeadService } from 'src/app/services/script-head.service';
 import { emailValidator } from 'src/app/theme/utils/app-validators';
 
 @Component({
@@ -8,6 +9,9 @@ import { emailValidator } from 'src/app/theme/utils/app-validators';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
+
+  apiLoaded!: boolean;
+
   contactForm: UntypedFormGroup;
   center: google.maps.LatLngLiteral = { lat: 40.678178, lng: -73.944158};
   zoom: number = 12;
@@ -20,7 +24,11 @@ export class ContactComponent implements OnInit {
     mapTypeControl: true
   }
  
-  constructor(public formBuilder: UntypedFormBuilder) { }
+  constructor(public formBuilder: UntypedFormBuilder, private scriptService: ScriptHeadService) { 
+    this.scriptService.obsCurrentApiStatus.subscribe(status => {
+      this.apiLoaded = status.valueOf();
+    });
+  }
 
   ngOnInit() {
     this.contactForm = this.formBuilder.group({

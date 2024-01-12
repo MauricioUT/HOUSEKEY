@@ -3,7 +3,7 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { FormsModule } from '@angular/forms';
-import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS, provideHttpClient, withFetch } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS, provideHttpClient, withFetch, withJsonpSupport } from '@angular/common/http';
 
 import { NgProgressModule } from 'ngx-progressbar';
 import { NgProgressHttpModule } from 'ngx-progressbar/http';
@@ -57,7 +57,7 @@ import { FooterComponent } from './theme/components/footer/footer.component';
   ],
   providers: [
     // provideClientHydration(),
-    // provideHttpClient(withFetch()), 
+    provideHttpClient(withJsonpSupport()), 
     AppSettings,
     { provide: OverlayContainer, useClass: CustomOverlayContainer },
     { provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true }
