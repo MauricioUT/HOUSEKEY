@@ -54,7 +54,6 @@ import { RatingComponent } from './rating/rating.component';
 import { PropertiesSearchResultsFiltersComponent } from './properties-search-results-filters/properties-search-results-filters.component';
 import { PropertiesCarouselComponent } from './properties-carousel/properties-carousel.component';
 import { ClientsComponent } from './clients/clients.component';
-import { GetInTouchComponent } from './get-in-touch/get-in-touch.component';
 import { CommentsComponent } from './comments/comments.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component'; 
 import { MissionComponent } from './mission/mission.component';
@@ -165,7 +164,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     PropertiesSearchResultsFiltersComponent,
     PropertiesCarouselComponent,
     ClientsComponent,
-    GetInTouchComponent,
     CommentsComponent,
     TestimonialsComponent,   
     MissionComponent, 
@@ -189,7 +187,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     PropertiesSearchResultsFiltersComponent,
     PropertiesCarouselComponent,
     ClientsComponent,
-    GetInTouchComponent,
     CommentsComponent,
     TestimonialsComponent,   
     MissionComponent, 
