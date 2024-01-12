@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { PagesComponent } from './pages/pages.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
 
 export const routes: Routes = [
   { 
@@ -21,7 +20,6 @@ export const routes: Routes = [
           { path: 'submit-property', loadChildren: () => import('./pages/submit-property/submit-property.module').then(m => m.SubmitPropertyModule) }   
       ]
   },
-  { path: 'lock-screen', component: LockScreenComponent },
   { path: '**', component: NotFoundComponent }
 ];
 

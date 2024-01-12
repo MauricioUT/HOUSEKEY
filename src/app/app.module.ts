@@ -31,7 +31,6 @@ import { ContactsComponent } from './theme/components/contacts/contacts.componen
 import { HorizontalMenuComponent } from './theme/components/menu/horizontal-menu/horizontal-menu.component';
 import { VerticalMenuComponent } from './theme/components/menu/vertical-menu/vertical-menu.component';
 import { FooterComponent } from './theme/components/footer/footer.component';
-import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +44,6 @@ import { LockScreenComponent } from './pages/lock-screen/lock-screen.component';
     HorizontalMenuComponent,
     VerticalMenuComponent,
     FooterComponent,
-    LockScreenComponent
   ],
   imports: [
     BrowserModule,
