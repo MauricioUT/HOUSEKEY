@@ -9,6 +9,7 @@ import { CompareOverviewComponent } from 'src/app/shared/compare-overview/compar
 import { emailValidator } from 'src/app/theme/utils/app-validators';
 import { EmbedVideoService } from 'src/app/services/embed-video.service';
 import { DomHandlerService } from 'src/app/dom-handler.service';
+import { ScriptHeadService } from 'src/app/services/script-head.service';
 
 @Component({
   selector: 'app-property',
@@ -38,13 +39,15 @@ export class PropertyComponent implements OnInit {
   }
   lat: number = 0;
   lng: number = 0;  
+  
+  apiLoaded!: boolean;
 
   constructor(public appSettings:AppSettings, 
               public appService:AppService, 
               private activatedRoute: ActivatedRoute, 
               private embedService: EmbedVideoService,
               public fb: UntypedFormBuilder,
-              private domHandlerService: DomHandlerService) {
+              private domHandlerService: DomHandlerService,  private scriptService: ScriptHeadService) {
     this.settings = this.appSettings.settings; 
 
           this.agent  = { 
@@ -65,6 +68,10 @@ export class PropertyComponent implements OnInit {
             ratingsValue: 480,
             image: 'assets/images/agents/a-1.jpg' 
         }
+
+        this.scriptService.obsCurrentApiStatus.subscribe(status => {
+          this.apiLoaded = status.valueOf();
+        });
   }
 
   ngOnInit() {
