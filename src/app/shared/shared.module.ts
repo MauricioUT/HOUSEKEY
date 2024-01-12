@@ -59,7 +59,6 @@ import { OurServicesComponent } from './our-services/our-services.component';
 import { LogoComponent } from './logo/logo.component';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 import { AlertDialogComponent } from './alert-dialog/alert-dialog.component'; 
-import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-header-controls.component'; 
 
 @NgModule({
   imports: [
@@ -163,7 +162,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     OurServicesComponent,
     ConfirmDialogComponent,
     AlertDialogComponent,
-    DialogHeaderControlsComponent  
   ],
   declarations: [ 
     LogoComponent,
@@ -183,7 +181,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     OurServicesComponent, 
     ConfirmDialogComponent,
     AlertDialogComponent,
-    DialogHeaderControlsComponent
   ]
 })
 export class SharedModule { }
