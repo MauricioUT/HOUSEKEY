@@ -16,7 +16,6 @@ export const routes: Routes = [
           { path: 'pricing', loadChildren: () => import('./pages/pricing/pricing.module').then(m => m.PricingModule) },
           { path: 'faq', loadChildren: () => import('./pages/faq/faq.module').then(m => m.FaqModule) },
           { path: 'terms-conditions', loadChildren: () => import('./pages/terms-conditions/terms-conditions.module').then(m => m.TermsConditionsModule) },
-          { path: 'account', loadChildren: () => import('./pages/account/account.module').then(m => m.AccountModule) }, 
           { path: 'submit-property', loadChildren: () => import('./pages/submit-property/submit-property.module').then(m => m.SubmitPropertyModule) }   
       ]
   },
