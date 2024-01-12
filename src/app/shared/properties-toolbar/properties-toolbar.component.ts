@@ -15,7 +15,7 @@ export class PropertiesToolbarComponent implements OnInit {
 
   public viewType: string = 'grid';
   public viewCol: number = 25;
-  public counts = [8, 12, 16, 24, 36];
+  public counts = [4, 8, 12, 16, 24, 36];
   public count:any;
   public sortings = ['Sort by Default', 'Newest', 'Oldest', 'Popular', 'Price (Low to High)', 'Price (High to Low)'];
   public sort:any;
