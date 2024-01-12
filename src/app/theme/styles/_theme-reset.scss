@@ -138,11 +138,7 @@
     .custom-table.mat-table .mat-mdc-row {
         border-color: mat.get-color-from-palette($foreground, divider);
     }
-
-    .submit-property .step-section,
-    .edit-property .step-section{
-        background: rgba(mat.get-color-from-palette($background, background), 0.7);
-    }
+    
     .input-file-container .mat-orphan-label{
         color: mat.get-color-from-palette($foreground, text) !important;
     }
