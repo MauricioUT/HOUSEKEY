@@ -153,12 +153,7 @@ export class HomeComponent implements OnInit {
       if(!this.settings.searchOnBtnClick){     
         this.properties.length = 0;  
       }            
-    }); 
-    event.valueChanges.pipe(debounceTime(500), distinctUntilChanged()).subscribe(() => { 
-      if(!this.settings.searchOnBtnClick){     
-        this.getProperties(); 
-      }
-    });       
+    });     
   } 
   public removeSearchField(field){ 
     this.message = null;   
