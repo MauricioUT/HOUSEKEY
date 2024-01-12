@@ -71,7 +71,7 @@
         "gallery": [         
             {
                 "small": "assets/images/props/flat-1/1-small.jpg",
-                "medium": "assets/images/props/flat-1/1-medium.jpg",
+                "medium": "assets/images/props/flat-1/1-medium.webp",
                 "big": "assets/images/props/flat-1/1-big.jpg"
             },
             {
@@ -200,7 +200,7 @@
         "gallery": [            
             {
                 "small": "assets/images/props/house-1/1-small.jpg",
-                "medium": "assets/images/props/house-1/1-medium.jpg",
+                "medium": "assets/images/props/house-1/1-medium.webp",
                 "big": "assets/images/props/house-1/1-big.jpg"
             },         
             {
