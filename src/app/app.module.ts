@@ -7,7 +7,6 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS, provideHttpClient, wit
 
 import { NgProgressModule } from 'ngx-progressbar';
 import { NgProgressHttpModule } from 'ngx-progressbar/http';
-import { GoogleMapsModule } from '@angular/google-maps'; 
 import { InputFileConfig, InputFileModule } from './theme/components/input-file/input-file.module';
 const config: InputFileConfig = {
   fileAccept: '*'
@@ -51,7 +50,6 @@ import { FooterComponent } from './theme/components/footer/footer.component';
     BrowserAnimationsModule,  
     FormsModule, 
     HttpClientModule,
-    GoogleMapsModule,
     NgProgressModule,
     NgProgressHttpModule, 
     InputFileModule.forRoot(config), 

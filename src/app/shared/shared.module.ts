@@ -38,7 +38,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { NgScrollbarModule } from 'ngx-scrollbar';
-import { GoogleMapsModule } from '@angular/google-maps';  
  
 import { PipesModule } from '../theme/pipes/pipes.module';
 import { DirectivesModule } from '../theme/directives/directives.module'; 
@@ -103,7 +102,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     MatTooltipModule,
     MatStepperModule,
     NgScrollbarModule,
-    GoogleMapsModule,
     PipesModule,
     DirectivesModule   
   ],
@@ -146,7 +144,6 @@ import { DialogHeaderControlsComponent } from './dialog-header-controls/dialog-h
     MatTooltipModule,
     MatStepperModule,
     NgScrollbarModule,
-    GoogleMapsModule,
     PipesModule,
     DirectivesModule, 
     LogoComponent,
