@@ -52,8 +52,7 @@ import { RatingComponent } from './rating/rating.component';
 import { PropertiesSearchResultsFiltersComponent } from './properties-search-results-filters/properties-search-results-filters.component';
 import { PropertiesCarouselComponent } from './properties-carousel/properties-carousel.component';
 import { ClientsComponent } from './clients/clients.component';
-import { CommentsComponent } from './comments/comments.component';
-import { TestimonialsComponent } from './testimonials/testimonials.component'; 
+import { CommentsComponent } from './comments/comments.component'; 
 import { MissionComponent } from './mission/mission.component';
 import { OurServicesComponent } from './our-services/our-services.component';
 import { LogoComponent } from './logo/logo.component';
@@ -157,7 +156,6 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     PropertiesCarouselComponent,
     ClientsComponent,
     CommentsComponent,
-    TestimonialsComponent,   
     MissionComponent, 
     OurServicesComponent,
     ConfirmDialogComponent,
@@ -176,7 +174,6 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     PropertiesCarouselComponent,
     ClientsComponent,
     CommentsComponent,
-    TestimonialsComponent,   
     MissionComponent, 
     OurServicesComponent, 
     ConfirmDialogComponent,
