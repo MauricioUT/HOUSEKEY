@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
-import { SwiperModule } from 'src/app/theme/components/swiper/swiper.module';
 import { FlexLayoutModule } from '@ngbracket/ngx-layout';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -51,7 +50,6 @@ import { CompareOverviewComponent } from './compare-overview/compare-overview.co
 import { RatingComponent } from './rating/rating.component';
 import { PropertiesSearchResultsFiltersComponent } from './properties-search-results-filters/properties-search-results-filters.component';
 import { PropertiesCarouselComponent } from './properties-carousel/properties-carousel.component';
-import { ClientsComponent } from './clients/clients.component';
 import { CommentsComponent } from './comments/comments.component'; 
 import { MissionComponent } from './mission/mission.component';
 import { OurServicesComponent } from './our-services/our-services.component';
@@ -64,7 +62,6 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     CommonModule,
     RouterModule,
     ReactiveFormsModule,
-    SwiperModule,
     FlexLayoutModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -106,7 +103,6 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
   exports: [
     RouterModule,
     ReactiveFormsModule,
-    SwiperModule,
     FlexLayoutModule,
     MatAutocompleteModule,
     MatBadgeModule,
@@ -154,7 +150,6 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     RatingComponent,
     PropertiesSearchResultsFiltersComponent,
     PropertiesCarouselComponent,
-    ClientsComponent,
     CommentsComponent,
     MissionComponent, 
     OurServicesComponent,
@@ -172,7 +167,6 @@ import { AlertDialogComponent } from './alert-dialog/alert-dialog.component';
     RatingComponent,
     PropertiesSearchResultsFiltersComponent,
     PropertiesCarouselComponent,
-    ClientsComponent,
     CommentsComponent,
     MissionComponent, 
     OurServicesComponent, 
