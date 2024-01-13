@@ -2,7 +2,7 @@
     <div class="theme-container"> 
     
         <mat-sidenav-container class="single-property mt-3">
-            <mat-sidenav #sidenav [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" position="end" autoFocus="false" (openedChange)="onOpenedChange()">
+            <mat-sidenav #sidenav [opened]="sidenavOpen" [mode]="sidenavOpen ? 'side' : 'over'" position="end" autoFocus="false" >
                 <button fxHide="false" fxHide.gt-sm="true" mat-mini-fab color="warn" class="close" (click)="sidenav.close()">
                     <mat-icon>close</mat-icon>
                 </button>
@@ -159,7 +159,7 @@
                                 <mat-icon class="m-0">compare_arrows</mat-icon>
                             </button>  
                         </div>   
-                        <div id="main-carousel" class="swiper-container" [swiper]="config" (indexChange)="onIndexChange($event)"> 
+                        <div id="main-carousel" class="swiper-container"  > 
                             <div class="swiper-wrapper">      
                                 <div *ngFor="let image of property?.gallery" class="swiper-slide">
                                     <img [attr.data-src]="image.big" class="swiper-lazy">
@@ -171,10 +171,10 @@
                         </div>
                     </div>
                     <div class="small-carousel">   
-                        <div id="small-carousel" class="swiper-container" [swiper]="config2"> 
+                        <div id="small-carousel" class="swiper-container"> 
                             <div class="swiper-wrapper">      
                                 <div *ngFor="let image of property?.gallery; let i=index;" class="swiper-slide" [ngClass]="'thumb-'+i" [class.active-thumb]="i == 0">
-                                    <img [attr.data-src]="image.small" class="swiper-lazy mw-100" (click)="selectImage(i)">
+                                    <img [attr.data-src]="image.small" class="swiper-lazy mw-100" >
                                     <div class="swiper-lazy-preloader"></div>          
                                 </div>
                             </div>  

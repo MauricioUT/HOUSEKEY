@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, ViewChild, SimpleChange } from '@angular/core';
-import { SwiperDirective, SwiperConfigInterface, SwiperPaginationInterface } from 'src/app/theme/components/swiper/swiper.module';
 import { Property } from '../../app.models';
 import { Settings, AppSettings } from '../../app.settings';
 
@@ -18,12 +17,7 @@ export class PropertyItemComponent implements OnInit {
   @Input() fullWidthPage: boolean = true;   
   public column:number = 4;
   // public address:string; 
-  @ViewChild(SwiperDirective) directiveRef: SwiperDirective;
-  public config: SwiperConfigInterface = {};
-  private pagination: SwiperPaginationInterface = {
-    el: '.swiper-pagination',
-    clickable: true
-  };
+
   public settings: Settings;
   constructor(public appSettings:AppSettings, public appService:AppService) {
     this.settings = this.appSettings.settings;
@@ -33,10 +27,6 @@ export class PropertyItemComponent implements OnInit {
 
   ngAfterViewInit(){
     this.initCarousel();
-    // this.appService.getAddress(this.property.location.lat, this.property.location.lng).subscribe(data=>{
-    //   console.log(data['results'][0]['formatted_address']);
-    //   this.address = data['results'][0]['formatted_address'];
-    // })
   } 
  
   ngOnChanges(changes: {[propKey: string]: SimpleChange}){  
@@ -44,21 +34,11 @@ export class PropertyItemComponent implements OnInit {
       this.getColumnCount(changes.viewColChanged.currentValue);
       if(!changes.viewColChanged.isFirstChange()){
         if(this.property.gallery.length > 1){     
-           this.directiveRef.update();  
+           // todo: ocultar si solo es 1 foto
         } 
       }
     } 
 
-    for (let propName in changes) {      
-      // let changedProp = changes[propName];
-      // if (!changedProp.isFirstChange()) {
-      //   if(this.property.gallery.length > 1){
-      //     this.initCarousel();
-      //     this.config.autoHeight = true;       
-      //     this.directiveRef.update();  
-      //   }       
-      // }      
-    }  
   }
 
   public getColumnCount(value){
@@ -97,24 +77,7 @@ export class PropertyItemComponent implements OnInit {
 
 
   public initCarousel(){
-    this.config = {
-      slidesPerView: 1,
-      spaceBetween: 0,         
-      keyboard: false,
-      navigation: true,
-      pagination: this.pagination,
-      grabCursor: true,        
-      loop: true,
-      preloadImages: false,
-      lazy: true,  
-      nested: true,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false
-      // },
-      speed: 500,
-      effect: "slide"
-    }
+   
   }
   
 

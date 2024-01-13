@@ -1,9 +1,8 @@
-import { Component, OnInit, ViewChild, HostListener, ViewChildren, QueryList } from '@angular/core';
+import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { AppService } from 'src/app/app.service';
 import { Property } from 'src/app/app.models';
-import { SwiperConfigInterface, SwiperDirective } from 'src/app/theme/components/swiper/swiper.module';
 import { AppSettings, Settings } from 'src/app/app.settings';
 import { CompareOverviewComponent } from 'src/app/shared/compare-overview/compare-overview.component';
 import { emailValidator } from 'src/app/theme/utils/app-validators';
@@ -19,10 +18,7 @@ import { ScriptHeadService } from 'src/app/services/script-head.service';
 })
 export class PropertyComponent implements OnInit {
   @ViewChild('sidenav') sidenav: any;  
-  @ViewChildren(SwiperDirective) swipers: QueryList<SwiperDirective>;
   public sidenavOpen:boolean = true;
-  public config: SwiperConfigInterface = {}; 
-  public config2: SwiperConfigInterface = {}; 
   private sub: any;
   public property:Property; 
   public settings: Settings;  
@@ -115,96 +111,9 @@ export class PropertyComponent implements OnInit {
       this.embedVideo = this.embedService.embed(this.property.videos[1].link);
       this.lat = +this.property.location.lat;
       this.lng = +this.property?.location.lng;
-      setTimeout(() => { 
-        this.config.observer = true;
-        this.config2.observer = true; 
-        this.swipers.forEach(swiper => { 
-          if(swiper){
-            swiper.setIndex(0);
-          } 
-        }); 
-      });
     });
   }
 
-  ngAfterViewInit(){
-    this.config = {
-      observer: false,
-      slidesPerView: 1,
-      spaceBetween: 0,       
-      keyboard: true,
-      navigation: true,
-      pagination: false,
-      grabCursor: true,        
-      loop: false,
-      preloadImages: false,
-      lazy: true,
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
-      }
-    };
-
-    this.config2 = {
-      observer: false,
-      slidesPerView: 4,
-      spaceBetween: 16,      
-      keyboard: true,
-      navigation: false,
-      pagination: false, 
-      grabCursor: true,       
-      loop: false, 
-      preloadImages: false,
-      lazy: true,  
-      breakpoints: {
-        200: {
-          slidesPerView: 2
-        },
-        480: {
-          slidesPerView: 3
-        },
-        600: {
-          slidesPerView: 4
-        } 
-      }
-    } 
-
-  }
-  
-
-  public onOpenedChange(){ 
-    this.swipers.forEach(swiper => { 
-      if(swiper){
-        swiper.update();
-      } 
-    });     
-  }
-
-  public selectImage(index:number){ 
-    this.swipers.forEach(swiper => {
-      if(swiper['elementRef'].nativeElement.id == 'main-carousel'){
-        swiper.setIndex(index);
-      }      
-    }); 
-  }
-
-  public onIndexChange(index: number) {  
-    this.swipers.forEach(swiper => { 
-      let elem = swiper['elementRef'].nativeElement;
-      if(elem.id == 'small-carousel'){
-        swiper.setIndex(index);  
-        for (let i = 0; i < elem.children[0].children.length; i++) {
-          const element = elem.children[0].children[i]; 
-          if(element.classList.contains('thumb-'+index)){
-            element.classList.add('active-thumb'); 
-          }
-          else{
-            element.classList.remove('active-thumb'); 
-          }
-        }
-      } 
-    });     
-  }
 
   public addToCompare(){
     this.appService.addToCompare(this.property, CompareOverviewComponent, (this.settings.rtl) ? 'rtl':'ltr'); 

@@ -10,7 +10,7 @@
             <img [src]="property.gallery[0].medium">
         </div>
         <div *ngIf="property.gallery.length > 1" class="mat-card-image w-100 m-0">
-            <div class="swiper-container" [swiper]="config">
+            <div class="swiper-container" >
                 <div class="swiper-wrapper"> 
                     <div *ngFor="let image of property.gallery" class="swiper-slide">
                         <img [attr.data-src]="image.medium" class="swiper-lazy">

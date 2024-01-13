@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppService } from '../../app.service'; 
-import { SwiperConfigInterface, SwiperDirective } from 'src/app/theme/components/swiper/swiper.module';
 import { Settings, AppSettings } from '../../app.settings';
 import { Subscription } from 'rxjs';
 import { MediaChange, MediaObserver } from '@ngbracket/ngx-layout';
@@ -14,8 +13,6 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./compare.component.scss']
 })
 export class CompareComponent implements OnInit {
-  @ViewChild(SwiperDirective) directiveRef: SwiperDirective;
-  public config: SwiperConfigInterface = {}; 
   public watcher: Subscription; 
   public settings: Settings;
   constructor(public appSettings:AppSettings, public appService:AppService, public mediaObserver: MediaObserver) {
@@ -23,30 +20,7 @@ export class CompareComponent implements OnInit {
   }
 
   ngOnInit() { 
-    this.config = {
-      observer: true,
-      slidesPerView: 1,
-      spaceBetween: 16,       
-      keyboard: false,
-      navigation: false,
-      pagination: false,
-      simulateTouch: false,
-      grabCursor: true,        
-      loop: false,
-      preloadImages: true,
-      lazy: false,    
-      breakpoints: {
-        600: {
-          slidesPerView: 2
-        },
-        960: {
-          slidesPerView: 3,
-        },
-        1280: {
-          slidesPerView: 4,
-        }
-      }
-    }
+    
     this.watchForChanges();
   }
 
@@ -55,24 +29,10 @@ export class CompareComponent implements OnInit {
   }
     
   public disableSwiper(){
-    setTimeout(() => {
-      if(this.directiveRef){
-        this.config.keyboard = false;
-        this.config.navigation = false;  
-        this.config.simulateTouch = false;
-        this.directiveRef.update();
-      } 
-    });   
+   
   }
   public enableSwiper(){
-    setTimeout(() => {
-      if(this.directiveRef){
-        this.config.keyboard = true;
-        this.config.navigation = { nextEl: '.carousel-next', prevEl: '.carousel-prev' };  
-        this.config.simulateTouch = true;
-        this.directiveRef.update();
-      } 
-    });      
+     
   }
 
   public clear(){
